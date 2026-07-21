@@ -1,10 +1,9 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        closeToOpen = { ")":"(", "]":"[", "}":"{" }
+        closeToOpen = {")":"(", "]":"[", "}":"{"}
 
-        # p stands for Parentheses
-        for p in s:
+        for p in s: # p stands for Parentheses
             if p in closeToOpen: # refers to only key in the key:value pair
                 if stack and stack[-1] == closeToOpen[p]:
                     stack.pop()
